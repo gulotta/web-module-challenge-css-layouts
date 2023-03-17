@@ -48,13 +48,38 @@ table {
 	border-spacing: 0;
 }
 /* CSS below */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    border: 1px solid grey;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+
+}
+
+section {
+    padding: 4% 0;
+}
+
+h1, h2 {
+    margin: 2% 0;
+}
 
 h1 {
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 3.5rem;
 }
 
 button {
@@ -67,10 +92,16 @@ button {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    width: 80%;
+    margin: 0 auto;
 }
 
-.topSection img {
-    margin-top: 5px;
+.bg-img {
+    background-image: url('https://images.unsplash.com/photo-1678985690723-e1d55583627e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 50vh;
 }
 
 footer {
@@ -81,9 +112,9 @@ footer {
 
 .middleSection {
     display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 20%;
 }
 
 .description {
@@ -93,4 +124,41 @@ footer {
     justify-content: center;
     align-items: center;
 
+}
+
+@media(max-width: 800px) {
+    
+    .middleSection {
+        flex-wrap: wrap;
+    }
+    
+    .middleSection img {
+        width: 20%;
+    }
+
+    .middleSection div {
+        width: 100%;
+    }
+}
+@media(max-width: 500px){
+    .links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .links button{
+        width: 40%;
+        margin: 1% 0;
+    }
+    .middleSection {
+        flex-wrap: wrap;
+    }
+    .middleSection img {
+        width: 40%;
+        margin: 4% 0;
+    }
+    .middleSection .description {
+        display: flex;
+        justify-content: center;
+    }
 }
